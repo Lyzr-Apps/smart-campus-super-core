@@ -1,0 +1,51 @@
+{
+  "agent_name": "Smart Reminder Agent",
+  "agent_id": "69883529b662c978044a158f",
+  "agent_purpose": "smart_reminders",
+  "description": "Sends deadline reminders, low attendance alerts, and missed submission warnings with redundancy for critical items",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "reminders": [
+        "any"
+      ],
+      "alerts": [
+        "any"
+      ],
+      "critical_items": [
+        "any"
+      ],
+      "attendance_warnings": [
+        "any"
+      ],
+      "next_check": "string",
+      "total_notifications": "number"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "reminders": [],
+      "alerts": [],
+      "critical_items": [],
+      "attendance_warnings": [],
+      "next_check": "2023-10-03T10:00:00Z",
+      "total_notifications": 0
+    },
+    "metadata": {
+      "agent_name": "Smart Reminder Agent",
+      "timestamp": "2023-10-03T04:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-08T07:07:45.761161",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "raw_text": "Error in LLM generation: **litellm.BadRequestError: GroqException - {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n**"
+  },
+  "test_passed": false
+}

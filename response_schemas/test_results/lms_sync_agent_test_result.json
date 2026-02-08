@@ -1,0 +1,25 @@
+{
+  "agent_name": "LMS Sync Agent",
+  "agent_id": "698834b829694629a3a3596e",
+  "test_message": "Fetch my current timetable, pending assignments, upcoming exams, and attendance percentage for all courses.",
+  "expected_purpose": "Fetches timetables, assignments, exams, and attendance from college LMS",
+  "timestamp": "2026-02-08T07:06:36.637076",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "error",
+    "result": {
+      "timetable": [],
+      "assignments": [],
+      "exams": [],
+      "attendance": {},
+      "cached": false,
+      "last_sync": "2024-06-15T14:22:35Z"
+    },
+    "metadata": {
+      "agent_name": "LMS Sync Agent",
+      "timestamp": "2024-06-15T14:22:35Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"error\",\n  \"result\": {\n    \"timetable\": [],\n    \"assignments\": [],\n    \"exams\": [],\n    \"attendance\": {},\n    \"cached\": false,\n    \"last_sync\": \"2024-06-15T14:22:35Z\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"LMS Sync Agent\",\n    \"timestamp\": \"2024-06-15T14:22:35Z\"\n  }\n}"
+}

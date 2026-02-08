@@ -1,0 +1,153 @@
+{
+  "agent_name": "Collaboration Agent",
+  "agent_id": "698834f2f92870f1ee0acc6a",
+  "agent_purpose": "collaboration",
+  "description": "Processes peer updates, manages shared calendars, coordinates study groups, and generates anonymous benchmarks",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "peer_updates": [
+        "any"
+      ],
+      "study_groups": [
+        {
+          "group_id": "string",
+          "topic": "string",
+          "meeting_time": "string",
+          "members": "number",
+          "available_seats": "number",
+          "location": "string"
+        }
+      ],
+      "shared_calendar": [
+        {
+          "event": "string",
+          "date_time": "string",
+          "location": "string"
+        }
+      ],
+      "benchmarks": {
+        "your_score_avg": "number",
+        "peer_group_avg": "number",
+        "percentile": "number",
+        "notes": "string"
+      },
+      "recommendations": [
+        "string"
+      ],
+      "collaboration_score": "number"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "peer_updates": [],
+      "study_groups": [
+        {
+          "group_id": "ds_group_1",
+          "topic": "Data Structures - Linked Lists & Trees",
+          "meeting_time": "2024-06-20T15:00:00Z",
+          "members": 5,
+          "available_seats": 2,
+          "location": "Room 203, Main Library"
+        },
+        {
+          "group_id": "ds_group_2",
+          "topic": "Data Structures - Sorting Algorithms",
+          "meeting_time": "2024-06-22T18:00:00Z",
+          "members": 4,
+          "available_seats": 1,
+          "location": "Online (Zoom link available after joining)"
+        }
+      ],
+      "shared_calendar": [
+        {
+          "event": "Data Structures Lecture: Graphs",
+          "date_time": "2024-06-19T09:00:00Z",
+          "location": "Auditorium A"
+        },
+        {
+          "event": "Data Structures Weekly Quiz",
+          "date_time": "2024-06-21T17:00:00Z",
+          "location": "Online"
+        }
+      ],
+      "benchmarks": {
+        "your_score_avg": 82,
+        "peer_group_avg": 79,
+        "percentile": 68,
+        "notes": "Your performance is above the peer average. Consistency in quiz participation is helping boost your percentile."
+      },
+      "recommendations": [
+        "Consider joining the Linked Lists & Trees group for collaborative learning this week.",
+        "Continue attending lectures and quizzes for sustained improvement.",
+        "Share study notes and resources within your group to help peers."
+      ],
+      "collaboration_score": 7
+    },
+    "metadata": {
+      "agent_name": "Collaboration Agent",
+      "timestamp": "2024-06-18T14:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-08T07:07:32.046594",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "peer_updates": [],
+      "study_groups": [
+        {
+          "group_id": "ds_group_1",
+          "topic": "Data Structures - Linked Lists & Trees",
+          "meeting_time": "2024-06-20T15:00:00Z",
+          "members": 5,
+          "available_seats": 2,
+          "location": "Room 203, Main Library"
+        },
+        {
+          "group_id": "ds_group_2",
+          "topic": "Data Structures - Sorting Algorithms",
+          "meeting_time": "2024-06-22T18:00:00Z",
+          "members": 4,
+          "available_seats": 1,
+          "location": "Online (Zoom link available after joining)"
+        }
+      ],
+      "shared_calendar": [
+        {
+          "event": "Data Structures Lecture: Graphs",
+          "date_time": "2024-06-19T09:00:00Z",
+          "location": "Auditorium A"
+        },
+        {
+          "event": "Data Structures Weekly Quiz",
+          "date_time": "2024-06-21T17:00:00Z",
+          "location": "Online"
+        }
+      ],
+      "benchmarks": {
+        "your_score_avg": 82,
+        "peer_group_avg": 79,
+        "percentile": 68,
+        "notes": "Your performance is above the peer average. Consistency in quiz participation is helping boost your percentile."
+      },
+      "recommendations": [
+        "Consider joining the Linked Lists & Trees group for collaborative learning this week.",
+        "Continue attending lectures and quizzes for sustained improvement.",
+        "Share study notes and resources within your group to help peers."
+      ],
+      "collaboration_score": 7
+    },
+    "metadata": {
+      "agent_name": "Collaboration Agent",
+      "timestamp": "2024-06-18T14:00:00Z"
+    }
+  },
+  "test_passed": true
+}

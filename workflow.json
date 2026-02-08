@@ -1,0 +1,153 @@
+{
+  "workflow_name": "Smart College Life Manager",
+  "description": "Comprehensive academic management system with LMS sync, study planning, collaboration, and smart reminders",
+  "version": "1.0.0",
+  "created_at": "2026-02-08T00:00:00Z",
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "User Input - Sync & Plan",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "academic_coordinator",
+      "type": "Agent",
+      "label": "Academic Coordinator",
+      "nodeCategory": "agent",
+      "agent_id": "6988350dab8c2b0ff025872c",
+      "agent_type": "manager",
+      "provider": "OpenAI",
+      "model": "gpt-4.1"
+    },
+    {
+      "id": "lms_sync_agent",
+      "type": "Agent",
+      "label": "LMS Sync Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698834b829694629a3a3596e",
+      "agent_type": "sub-agent",
+      "provider": "OpenAI",
+      "model": "gpt-4.1"
+    },
+    {
+      "id": "study_planner_agent",
+      "type": "Agent",
+      "label": "Study Planner Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698834ceb662c978044a1588",
+      "agent_type": "sub-agent",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-5"
+    },
+    {
+      "id": "collaboration_agent",
+      "type": "Agent",
+      "label": "Collaboration Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698834f2f92870f1ee0acc6a",
+      "agent_type": "sub-agent",
+      "provider": "OpenAI",
+      "model": "gpt-4.1"
+    },
+    {
+      "id": "smart_reminder_agent",
+      "type": "Agent",
+      "label": "Smart Reminder Agent (Independent)",
+      "nodeCategory": "agent",
+      "agent_id": "69883529b662c978044a158f",
+      "agent_type": "independent",
+      "provider": "Google",
+      "model": "gemini-2.5-pro",
+      "trigger": "Scheduled: Every 6 hours + event-triggered"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Unified Student View",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "academic_coordinator",
+      "label": "Sync & Plan Request"
+    },
+    {
+      "source": "academic_coordinator",
+      "target": "lms_sync_agent",
+      "label": "Fetch LMS Data"
+    },
+    {
+      "source": "academic_coordinator",
+      "target": "study_planner_agent",
+      "label": "Generate Study Plan"
+    },
+    {
+      "source": "academic_coordinator",
+      "target": "collaboration_agent",
+      "label": "Get Collaboration Updates"
+    },
+    {
+      "source": "lms_sync_agent",
+      "target": "output_node",
+      "label": "LMS Data"
+    },
+    {
+      "source": "study_planner_agent",
+      "target": "output_node",
+      "label": "Study Plan"
+    },
+    {
+      "source": "collaboration_agent",
+      "target": "output_node",
+      "label": "Collaboration Data"
+    }
+  ],
+  "agents": {
+    "academic_coordinator": {
+      "agent_id": "6988350dab8c2b0ff025872c",
+      "name": "Academic Coordinator",
+      "type": "manager",
+      "description": "Orchestrates data sync, planning, and collaboration agents; aggregates results into unified student view",
+      "trigger": "Sync & Plan on Dashboard",
+      "managed_agents": [
+        "698834b829694629a3a3596e",
+        "698834ceb662c978044a1588",
+        "698834f2f92870f1ee0acc6a"
+      ]
+    },
+    "lms_sync_agent": {
+      "agent_id": "698834b829694629a3a3596e",
+      "name": "LMS Sync Agent",
+      "type": "sub-agent",
+      "description": "Fetches timetables, assignments, exams, and attendance from college LMS portal; handles offline caching",
+      "tools": "Custom LMS API",
+      "trigger": "Auto (via Manager)"
+    },
+    "study_planner_agent": {
+      "agent_id": "698834ceb662c978044a1588",
+      "name": "Study Planner Agent",
+      "type": "sub-agent",
+      "description": "Creates personalized daily/weekly study plans based on priorities, deadlines, and learned successful strategies",
+      "tools": "Student Performance Data",
+      "trigger": "Auto (via Manager)"
+    },
+    "collaboration_agent": {
+      "agent_id": "698834f2f92870f1ee0acc6a",
+      "name": "Collaboration Agent",
+      "type": "sub-agent",
+      "description": "Processes peer updates, manages shared calendars, coordinates study groups, and generates anonymous benchmarks",
+      "tools": "Student Performance Data",
+      "trigger": "Auto (via Manager)"
+    },
+    "smart_reminder_agent": {
+      "agent_id": "69883529b662c978044a158f",
+      "name": "Smart Reminder Agent",
+      "type": "independent",
+      "description": "Sends deadline reminders, low attendance alerts, and missed submission warnings with redundancy for critical items",
+      "trigger": "Scheduled: Every 6 hours + event-triggered"
+    }
+  }
+}

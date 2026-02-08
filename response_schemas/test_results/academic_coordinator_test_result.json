@@ -1,0 +1,241 @@
+{
+  "agent_name": "Academic Coordinator",
+  "agent_id": "6988350dab8c2b0ff025872c",
+  "test_message": "I need to sync my academic data and get my weekly study plan. Also show me upcoming class events and study group opportunities.",
+  "expected_purpose": "Manager agent that orchestrates LMS sync, study planning, and collaboration",
+  "timestamp": "2026-02-08T07:06:28.620140",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "lms_data": {
+        "timetable": [
+          {
+            "day": "Monday",
+            "time": "09:00-11:00",
+            "course": "Computer Science 101",
+            "room": "A201"
+          },
+          {
+            "day": "Wednesday",
+            "time": "12:00-14:00",
+            "course": "Mathematics 102",
+            "room": "B104"
+          },
+          {
+            "day": "Friday",
+            "time": "10:00-12:00",
+            "course": "Physics 103",
+            "room": "C302"
+          }
+        ],
+        "assignments": [
+          {
+            "course": "Computer Science 101",
+            "title": "Data Structures Assignment 2",
+            "status": "pending",
+            "deadline": "2024-07-10T23:59:00Z"
+          },
+          {
+            "course": "Mathematics 102",
+            "title": "Calculus Homework 4",
+            "status": "completed",
+            "deadline": "2024-06-28T23:59:00Z"
+          }
+        ],
+        "exams": [
+          {
+            "course": "Physics 103",
+            "type": "Midterm",
+            "date": "2024-07-12T09:00:00Z",
+            "room": "C302",
+            "grade": null
+          },
+          {
+            "course": "Mathematics 102",
+            "type": "Final",
+            "date": "2024-07-18T14:00:00Z",
+            "room": "B104",
+            "grade": "A-"
+          }
+        ],
+        "attendance": {
+          "Computer Science 101": {
+            "attended": 18,
+            "total": 20,
+            "percentage": 90
+          },
+          "Mathematics 102": {
+            "attended": 15,
+            "total": 20,
+            "percentage": 75
+          },
+          "Physics 103": {
+            "attended": 20,
+            "total": 20,
+            "percentage": 100
+          }
+        },
+        "last_sync": "2024-06-30T10:28:00Z"
+      },
+      "study_plan": {
+        "weekly_plan": {
+          "week_focus": "Priority: Computer Science 101 assignment completion (due 2024-07-10) and Physics 103 midterm revision. Secondary: Address low-attendance course gaps.",
+          "total_study_hours": 42.5,
+          "breakdown": {
+            "Computer Science 101": "8 hours (Mon-Wed focused sprint)",
+            "Physics 103": "15 hours (distributed, Thu-Sat peak)",
+            "Low-attendance courses": "10.5 hours (daily catch-up)",
+            "General review": "6 hours",
+            "Buffer time": "3 hours"
+          }
+        },
+        "priority_tasks": [
+          {
+            "rank": 1,
+            "task": "Computer Science 101 Assignment",
+            "deadline": "2024-07-10",
+            "urgency": "CRITICAL"
+          },
+          {
+            "rank": 2,
+            "task": "Physics 103 Midterm Revision",
+            "urgency": "HIGH"
+          },
+          {
+            "rank": 3,
+            "task": "Low-Attendance Course Catch-Up",
+            "urgency": "MEDIUM-HIGH",
+            "alert": "\u26a0\ufe0f ATTENDANCE BELOW 80%"
+          }
+        ],
+        "attendance_alert": {
+          "status": "WARNING",
+          "message": "\u26a0\ufe0f Mathematics 102 attendance is below 80%. Immediate catch-up sessions are scheduled.",
+          "recommended_actions": [
+            "Review all recorded lectures from missed classes",
+            "Contact professors to explain absences",
+            "Form study groups to share notes",
+            "Set calendar reminders for classes",
+            "Attend office hours to clarify concepts"
+          ]
+        }
+      },
+      "collaboration": {
+        "peer_updates": [
+          {
+            "course": "Computer Science 101",
+            "recent_activity": "Increased participation in coding practice sessions. High engagement in last group project."
+          },
+          {
+            "course": "Mathematics 102",
+            "recent_activity": "Peer-led calculus tutorial held, collaborative worksheet shared."
+          },
+          {
+            "course": "Physics 103",
+            "recent_activity": "Problem-solving breakout groups running twice weekly."
+          }
+        ],
+        "study_groups": [
+          {
+            "course": "Computer Science 101",
+            "groups": [
+              {
+                "group_id": "CS101-Alpha",
+                "focus": "Midterm review & coding practice",
+                "next_meeting": "2024-07-02T17:00:00Z",
+                "availability": "3 open spots"
+              },
+              {
+                "group_id": "CS101-Beta",
+                "focus": "Lab report collaboration",
+                "next_meeting": "2024-07-04T15:00:00Z",
+                "availability": "2 open spots"
+              }
+            ]
+          },
+          {
+            "course": "Mathematics 102",
+            "groups": [
+              {
+                "group_id": "MATH102-Prime",
+                "focus": "Exam prep: Integration techniques",
+                "next_meeting": "2024-07-03T16:00:00Z",
+                "availability": "5 open spots"
+              }
+            ]
+          },
+          {
+            "course": "Physics 103",
+            "groups": [
+              {
+                "group_id": "PHYS103-Sigma",
+                "focus": "Weekly quiz review & problem-solving",
+                "next_meeting": "2024-07-05T18:00:00Z",
+                "availability": "4 open spots"
+              }
+            ]
+          }
+        ],
+        "shared_calendar": [
+          {
+            "event": "Computer Science 101: Lecture - Algorithms",
+            "date": "2024-07-01",
+            "time": "10:00-11:30"
+          },
+          {
+            "event": "Mathematics 102: Problem Set Review",
+            "date": "2024-07-02",
+            "time": "14:00-15:30"
+          },
+          {
+            "event": "Physics 103: Lab Session",
+            "date": "2024-07-03",
+            "time": "13:00-15:00"
+          },
+          {
+            "event": "Computer Science 101: Midterm Exam",
+            "date": "2024-07-08",
+            "time": "09:00-11:00"
+          },
+          {
+            "event": "Mathematics 102: Quiz 2",
+            "date": "2024-07-05",
+            "time": "11:00-12:00"
+          }
+        ],
+        "collaboration_score": 84,
+        "recommendations": [
+          "Join open study groups for exam topics.",
+          "Schedule group sessions in your calendar.",
+          "Contribute to shared folder resources for collaboration."
+        ]
+      },
+      "urgent_items": [
+        {
+          "item": "Computer Science 101 Assignment",
+          "due": "2024-07-10T23:59:00Z",
+          "urgency": "CRITICAL"
+        },
+        {
+          "item": "Physics 103 Midterm Exam",
+          "due": "2024-07-12T09:00:00Z",
+          "urgency": "HIGH"
+        },
+        {
+          "item": "Low attendance in Mathematics 102",
+          "percentage": 75,
+          "urgency": "MEDIUM-HIGH"
+        }
+      ],
+      "overall_recommendations": "1. Complete Computer Science 101 assignment before Wednesday (due 2024-07-10). 2. Dedicate 15 hours to Physics 103 midterm prep this week. 3. Act on attendance alert for Mathematics 102. 4. Join/attend study groups listed for collaboration. 5. Integrate rest and wellness into your daily routine.",
+      "sync_timestamp": "2024-07-08T10:30:00Z"
+    },
+    "metadata": {
+      "agent_name": "Academic Coordinator",
+      "timestamp": "2024-07-08T10:30:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"lms_data\": {\n      \"timetable\": [\n        {\n          \"day\": \"Monday\",\n          \"time\": \"09:00-11:00\",\n          \"course\": \"Computer Science 101\",\n          \"room\": \"A201\"\n        },\n        {\n          \"day\": \"Wednesday\",\n          \"time\": \"12:00-14:00\",\n          \"course\": \"Mathematics 102\",\n          \"room\": \"B104\"\n        },\n        {\n          \"day\": \"Friday\",\n          \"time\": \"10:00-12:00\",\n          \"course\": \"Physics 103\",\n          \"room\": \"C302\"\n        }\n      ],\n      \"assignments\": [\n        {\n          \"course\": \"Computer Science 101\",\n          \"title\": \"Data Structures Assignment 2\",\n          \"status\": \"pending\",\n          \"deadline\": \"2024-07-10T23:59:00Z\"\n        },\n        {\n          \"course\": \"Mathematics 102\",\n          \"title\": \"Calculus Homework 4\",\n          \"status\": \"completed\",\n          \"deadline\": \"2024-06-28T23:59:00Z\"\n        }\n      ],\n      \"exams\": [\n        {\n          \"course\": \"Physics 103\",\n          \"type\": \"Midterm\",\n          \"date\": \"2024-07-12T09:00:00Z\",\n          \"room\": \"C302\",\n          \"grade\": null\n        },\n        {\n          \"course\": \"Mathematics 102\",\n          \"type\": \"Final\",\n          \"date\": \"2024-07-18T14:00:00Z\",\n          \"room\": \"B104\",\n          \"grade\": \"A-\"\n        }\n      ],\n      \"attendance\": {\n        \"Computer Science 101\": {\n          \"attended\": 18,\n          \"total\": 20,\n          \"percentage\": 90\n        },\n        \"Mathematics 102\": {\n          \"attended\": 15,\n          \"total\": 20,\n          \"percentage\": 75\n        },\n        \"Physics 103\": {\n          \"attended\": 20,\n          \"total\": 20,\n          \"percentage\": 100\n        }\n      },\n      \"last_sync\": \"2024-06-30T10:28:00Z\"\n    },\n    \"study_plan\": {\n      \"weekly_plan\": {\n        \"week_focus\": \"Priority: Computer Science 101 assignment completion (due 2024-07-10) and Physics 103 midterm revision. Secondary: Address low-attendance course gaps.\",\n        \"total_study_hours\": 42.5,\n        \"breakdown\": {\n          \"Computer Science 101\": \"8 hours (Mon-Wed focused sprint)\",\n          \"Physics 103\": \"15 hours (distributed, Thu-Sat peak)\",\n          \"Low-attendance courses\": \"10.5 hours (daily catch-up)\",\n          \"General review\": \"6 hours\",\n          \"Buffer time\": \"3 hours\"\n        }\n      },\n      \"priority_tasks\": [\n        {\n          \"rank\": 1,\n          \"task\": \"Computer Science 101 Assignment\",\n          \"deadline\": \"2024-07-10\",\n          \"urgency\": \"CRITICAL\"\n        },\n        {\n          \"rank\": 2,\n          \"task\": \"Physics 103 Midterm Revision\",\n          \"urgency\": \"HIGH\"\n        },\n        {\n          \"rank\": 3,\n          \"task\": \"Low-Attendance Course Catch-Up\",\n          \"urgency\": \"MEDIUM-HIGH\",\n          \"alert\": \"\u26a0\ufe0f ATTENDANCE BELOW 80%\"\n        }\n      ],\n      \"attendance_alert\": {\n        \"status\": \"WARNING\",\n        \"message\": \"\u26a0\ufe0f Mathematics 102 attendance is below 80%. Immediate catch-up sessions are scheduled.\",\n        \"recommended_actions\": [\n          \"Review all recorded lectures from missed classes\",\n          \"Contact professors to explain absences\",\n          \"Form study groups to share notes\",\n          \"Set calendar reminders for classes\",\n          \"Attend office hours to clarify concepts\"\n        ]\n      }\n    },\n    \"collaboration\": {\n      \"peer_updates\": [\n        {\n          \"course\": \"Computer Science 101\",\n          \"recent_activity\": \"Increased participation in coding practice sessions. High engagement in last group project.\"\n        },\n        {\n          \"course\": \"Mathematics 102\",\n          \"recent_activity\": \"Peer-led calculus tutorial held, collaborative worksheet shared.\"\n        },\n        {\n          \"course\": \"Physics 103\",\n          \"recent_activity\": \"Problem-solving breakout groups running twice weekly.\"\n        }\n      ],\n      \"study_groups\": [\n        {\n          \"course\": \"Computer Science 101\",\n          \"groups\": [\n            {\n              \"group_id\": \"CS101-Alpha\",\n              \"focus\": \"Midterm review & coding practice\",\n              \"next_meeting\": \"2024-07-02T17:00:00Z\",\n              \"availability\": \"3 open spots\"\n            },\n            {\n              \"group_id\": \"CS101-Beta\",\n              \"focus\": \"Lab report collaboration\",\n              \"next_meeting\": \"2024-07-04T15:00:00Z\",\n              \"availability\": \"2 open spots\"\n            }\n          ]\n        },\n        {\n          \"course\": \"Mathematics 102\",\n          \"groups\": [\n            {\n              \"group_id\": \"MATH102-Prime\",\n              \"focus\": \"Exam prep: Integration techniques\",\n              \"next_meeting\": \"2024-07-03T16:00:00Z\",\n              \"availability\": \"5 open spots\"\n            }\n          ]\n        },\n        {\n          \"course\": \"Physics 103\",\n          \"groups\": [\n            {\n              \"group_id\": \"PHYS103-Sigma\",\n              \"focus\": \"Weekly quiz review & problem-solving\",\n              \"next_meeting\": \"2024-07-05T18:00:00Z\",\n              \"availability\": \"4 open spots\"\n            }\n          ]\n        }\n      ],\n      \"shared_calendar\": [\n        {\n          \"event\": \"Computer Science 101: Lecture - Algorithms\",\n          \"date\": \"2024-07-01\",\n          \"time\": \"10:00-11:30\"\n        },\n        {\n          \"event\": \"Mathematics 102: Problem Set Review\",\n          \"date\": \"2024-07-02\",\n          \"time\": \"14:00-15:30\"\n        },\n        {\n          \"event\": \"Physics 103: Lab Session\",\n          \"date\": \"2024-07-03\",\n          \"time\": \"13:00-15:00\"\n        },\n        {\n          \"event\": \"Computer Science 101: Midterm Exam\",\n          \"date\": \"2024-07-08\",\n          \"time\": \"09:00-11:00\"\n        },\n        {\n          \"event\": \"Mathematics 102: Quiz 2\",\n          \"date\": \"2024-07-05\",\n          \"time\": \"11:00-12:00\"\n        }\n      ],\n      \"collaboration_score\": 84,\n      \"recommendations\": [\n        \"Join open study groups for exam topics.\",\n        \"Schedule group sessions in your calendar.\",\n        \"Contribute to shared folder resources for collaboration.\"\n      ]\n    },\n    \"urgent_items\": [\n      {\n        \"item\": \"Computer Science 101 Assignment\",\n        \"due\": \"2024-07-10T23:59:00Z\",\n        \"urgency\": \"CRITICAL\"\n      },\n      {\n        \"item\": \"Physics 103 Midterm Exam\",\n        \"due\": \"2024-07-12T09:00:00Z\",\n        \"urgency\": \"HIGH\"\n      },\n      {\n        \"item\": \"Low attendance in Mathematics 102\",\n        \"percentage\": 75,\n        \"urgency\": \"MEDIUM-HIGH\"\n      }\n    ],\n    \"overall_recommendations\": \"1. Complete Computer Science 101 assignment before Wednesday (due 2024-07-10). 2. Dedicate 15 hours to Physics 103 midterm prep this week. 3. Act on attendance alert for Mathematics 102. 4. Join/attend study groups listed for collaboration. 5. Integrate rest and wellness into your daily routine.\",\n    \"sync_timestamp\": \"2024-07-08T10:30:00Z\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Academic Coordinator\",\n    \"timestamp\": \"2024-07-08T10:30:00Z\"\n  }\n}"
+}

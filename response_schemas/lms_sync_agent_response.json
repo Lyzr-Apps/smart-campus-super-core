@@ -1,0 +1,61 @@
+{
+  "agent_name": "LMS Sync Agent",
+  "agent_id": "698834b829694629a3a3596e",
+  "agent_purpose": "lms_sync",
+  "description": "Fetches timetables, assignments, exams, and attendance from college LMS portal with offline caching",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "timetable": [
+        "any"
+      ],
+      "assignments": [
+        "any"
+      ],
+      "exams": [
+        "any"
+      ],
+      "attendance": {},
+      "cached": "boolean",
+      "last_sync": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "timetable": [],
+      "assignments": [],
+      "exams": [],
+      "attendance": {},
+      "cached": false,
+      "last_sync": "2024-06-15T14:22:35Z"
+    },
+    "metadata": {
+      "agent_name": "LMS Sync Agent",
+      "timestamp": "2024-06-15T14:22:35Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-08T07:06:36.637603",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "timetable": [],
+      "assignments": [],
+      "exams": [],
+      "attendance": {},
+      "cached": false,
+      "last_sync": "2024-06-15T14:22:35Z"
+    },
+    "metadata": {
+      "agent_name": "LMS Sync Agent",
+      "timestamp": "2024-06-15T14:22:35Z"
+    }
+  },
+  "test_passed": true
+}

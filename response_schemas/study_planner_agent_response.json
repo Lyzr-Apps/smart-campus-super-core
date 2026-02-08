@@ -1,0 +1,177 @@
+{
+  "agent_name": "Study Planner Agent",
+  "agent_id": "698834ceb662c978044a1588",
+  "agent_purpose": "study_planning",
+  "description": "Creates personalized daily/weekly study plans based on priorities, deadlines, and learned successful strategies",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "daily_plan": [
+        {
+          "time": "string",
+          "activity": "string",
+          "technique": "string",
+          "priority": "string"
+        }
+      ],
+      "weekly_plan": [
+        {
+          "day": "string",
+          "focus": "string",
+          "hours": "number"
+        }
+      ],
+      "priority_tasks": [
+        {
+          "task": "string",
+          "deadline": "string",
+          "urgency": "string"
+        }
+      ],
+      "study_techniques": [
+        {
+          "name": "string",
+          "description": "string",
+          "best_for": "string"
+        }
+      ],
+      "recommendations": "string",
+      "estimated_hours": "number"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "daily_plan": [
+        {
+          "time": "09:00 - 10:30",
+          "activity": "Mathematics - Calculus Problem Sets",
+          "technique": "Pomodoro (25 min work, 5 min break)",
+          "priority": "high"
+        },
+        {
+          "time": "10:45 - 12:00",
+          "activity": "Biology - Chapter Review & Note Consolidation",
+          "technique": "Active Recall & Cornell Method",
+          "priority": "medium"
+        },
+        {
+          "time": "14:00 - 15:30",
+          "activity": "English Literature - Essay Drafting",
+          "technique": "Deep Work Session",
+          "priority": "high"
+        },
+        {
+          "time": "16:00 - 17:00",
+          "activity": "Chemistry - Lab Report Preparation",
+          "technique": "Structured Writing with Breaks",
+          "priority": "medium"
+        },
+        {
+          "time": "19:00 - 20:00",
+          "activity": "Review & Flashcard Practice (All Subjects)",
+          "technique": "Spaced Repetition",
+          "priority": "low"
+        }
+      ],
+      "weekly_plan": [
+        {
+          "day": "Monday",
+          "focus": "Mathematics & Science Core Concepts",
+          "hours": 5
+        },
+        {
+          "day": "Tuesday",
+          "focus": "Writing Assignments & Literature Analysis",
+          "hours": 4.5
+        },
+        {
+          "day": "Wednesday",
+          "focus": "Lab Work & Practical Applications",
+          "hours": 5
+        },
+        {
+          "day": "Thursday",
+          "focus": "Exam Preparation & Past Paper Review",
+          "hours": 4
+        },
+        {
+          "day": "Friday",
+          "focus": "Group Study & Collaborative Projects",
+          "hours": 3.5
+        },
+        {
+          "day": "Saturday",
+          "focus": "Comprehensive Review & Weak Areas",
+          "hours": 4
+        },
+        {
+          "day": "Sunday",
+          "focus": "Light Review & Weekly Planning",
+          "hours": 2
+        }
+      ],
+      "priority_tasks": [
+        {
+          "task": "Complete Calculus Assignment Chapter 7",
+          "deadline": "3 days",
+          "urgency": "high"
+        },
+        {
+          "task": "Biology Midterm Exam Preparation",
+          "deadline": "1 week",
+          "urgency": "high"
+        },
+        {
+          "task": "English Essay First Draft",
+          "deadline": "5 days",
+          "urgency": "medium"
+        },
+        {
+          "task": "Chemistry Lab Report Submission",
+          "deadline": "4 days",
+          "urgency": "medium"
+        }
+      ],
+      "study_techniques": [
+        {
+          "name": "Pomodoro Technique",
+          "description": "25 minutes focused study followed by 5-minute breaks",
+          "best_for": "Mathematics, problem-solving tasks"
+        },
+        {
+          "name": "Spaced Repetition",
+          "description": "Review material at increasing intervals to improve retention",
+          "best_for": "Vocabulary, formulas, memorization"
+        },
+        {
+          "name": "Active Recall",
+          "description": "Test yourself without looking at notes to strengthen memory",
+          "best_for": "All subjects, especially exam preparation"
+        },
+        {
+          "name": "Feynman Technique",
+          "description": "Explain concepts in simple terms as if teaching someone else",
+          "best_for": "Complex topics, science concepts"
+        }
+      ],
+      "recommendations": "Based on optimal learning strategies, I recommend starting your day with high-priority subjects when mental energy is highest. Incorporate regular breaks to prevent burnout and maintain focus. Use active recall and spaced repetition for exam preparation, especially for subjects requiring memorization. Schedule collaborative study sessions mid-week to reinforce understanding. Reserve weekends for comprehensive review and addressing weak areas. Maintain consistent sleep patterns and avoid cramming sessions, as distributed practice yields better long-term retention.",
+      "estimated_hours": 28
+    },
+    "metadata": {
+      "agent_name": "Study Planner Agent",
+      "timestamp": "2025-01-21T10:30:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-08T07:07:20.569785",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "raw_text": "```json\n{\n  \"status\": \"success\",\n  \"result\": {\n    \"daily_plan\": [\n      {\n        \"day\": \"Monday\",\n        \"focus\": \"Data Structures Exam Day + Recovery\",\n        \"sessions\": [\n          {\n            \"time\": \"8:00 AM - 9:00 AM\",\n            \"activity\": \"Final review: Key algorithms & time complexities\",\n            \"technique\": \"Active recall with flashcards\"\n          },\n          {\n            \"time\": \"9:00 AM - 9:30 AM\",\n            \"activity\": \"Light walk + mental preparation\",\n            \"technique\": \"Relaxation technique\"\n          },\n          {\n            \"time\": \"Exam Time\",\n            \"activity\": \"Data Structures Exam\",\n            \"technique\": \"Read questions carefully, time management\"\n          },\n          {\n            \"time\": \"Evening (6:00 PM - 8:00 PM)\",\n            \"activity\": \"Start Assignment 1 (lighter workload post-exam)\",\n            \"technique\": \"Pomodoro: 25 min work, 5 min break\"\n          }\n        ]\n      },\n      {\n        \"day\": \"Tuesday\",\n        \"focus\": \"DBMS Preparation + Assignment Progress\",\n        \"sessions\": [\n          {\n            \"time\": \"9:00 AM - 11:30 AM\",\n            \"activity\": \"DBMS: SQL queries, normalization, transactions\",\n            \"technique\": \"Pomodoro sessions with practice problems\"\n          },\n          {\n            \"time\": \"11:30 AM - 12:00 PM\",\n            \"activity\": \"Break + Light physical activity\"\n          },\n          {\n            \"time\": \"2:00 PM - 4:30 PM\",\n            \"activity\": \"Complete Assignment 1\",\n            \"technique\": \"Focus blocks with 10-min breaks\"\n          },\n          {\n            \"time\": \"7:00 PM - 9:00 PM\",\n            \"activity\": \"DBMS: Review indexing, query optimization\",\n            \"technique\": \"Spaced repetition + note summarization\"\n          }\n        ]\n      },\n      {\n        \"day\": \"Wednesday\",\n        \"focus\": \"Intensive DBMS Prep + Assignment 2\",\n        \"sessions\": [\n          {\n            \"time\": \"9:00 AM - 11:30 AM\",\n            \"activity\": \"DBMS: ER diagrams, relational algebra, practice problems\",\n            \"technique\": \"Active problem solving + self-testing\"\n          },\n          {\n            \"time\": \"11:30 AM - 12:00 PM\",\n            \"activity\": \"Break + Nutrition\"\n          },\n          {\n            \"time\": \"1:00 PM - 3:30 PM\",\n            \"activity\": \"Work on Assignment 2 (50% completion target)\",\n            \"technique\": \"Time-boxing with clear milestones\"\n          },\n          {\n            \"time\": \"5:00 PM - 7:00 PM\",\n            \"activity\": \"DBMS mock test + review weak areas\",\n            \"technique\": \"Timed practice under exam conditions\"\n          },\n          {\n            \"time\": \"8:00 PM - 9:00 PM\",\n            \"activity\": \"Light review of DBMS notes\",\n            \"technique\": \"Passive review before sleep for consolidation\"\n          }\n        ]\n      },\n      {\n        \"day\": \"Thursday\",\n        \"focus\": \"DBMS Exam Day + Assignment Sprint\",\n        \"sessions\": [\n          {\n            \"time\": \"8:00 AM - 9:00 AM\",\n            \"activity\": \"Final DBMS review: Key concepts & formulas\",\n            \"technique\": \"Quick flashcard review\"\n          },\n          {\n            \"time\": \"9:00 AM - 9:30 AM\",\n            \"activity\": \"Mental preparation + relaxation\",\n            \"technique\": \"Deep breathing exercises\"\n          },\n          {\n            \"time\": \"Exam Time\",\n            \"activity\": \"DBMS Exam\",\n            \"technique\": \"Strategic time allocation per question\"\n          },\n          {\n            \"time\": \"Evening (5:00 PM - 8:00 PM)\",\n            \"activity\": \"Complete Assignment 2 (remaining 50%)\",\n            \"technique\": \"Focused work sprints with short breaks\"\n          }\n        ]\n      },\n      {\n        \"day\": \"Friday\",\n        \"focus\": \"Assignment Completion & Submission\",\n        \"sessions\": [\n          {\n            \"time\": \"9:00 AM - 12:00 PM\",\n            \"activity\": \"Work on Assignment 3 (priority completion)\",\n            \"technique\": \"Deep work blocks with minimal distractions\"\n          },\n          {\n            \"time\": \"12:00 PM - 1:00 PM\",\n            \"activity\": \"Lunch break + mental reset\"\n          },\n          {\n            \"time\": \"2:00 PM - 5:00 PM\",\n            \"activity\": \"Finalize all 3 assignments, review, proofread\",\n            \"technique\": \"Quality check + peer review if possible\"\n          },\n          {\n            \"time\": \"5:00 PM - 6:00 PM\",\n            \"activity\": \"Submit all assignments + buffer time\",\n            \"technique\": \"Double-check submission requirements\"\n          }\n        ]\n      },\n      {\n        \"day\": \"Saturday\",\n        \"focus\": \"Recovery & Light Catch-up\",\n        \"sessions\": [\n          {\n            \"time\": \"10:00 AM - 12:00 PM\",\n            \"activity\": \"Review any pending course materials at relaxed pace\",\n            \"technique\": \"Light reading, no pressure\"\n          },\n          {\n            \"time\": \"Afternoon\",\n            \"activity\": \"Rest, recreation, and recharge\",\n            \"technique\": \"Active recovery - hobbies, socializing\"\n          }\n        ]\n      },\n      {\n        \"day\": \"Sunday\",\n        \"focus\": \"Planning & Light Preparation\",\n        \"sessions\": [\n          {\n            \"time\": \"10:00 AM - 12:00 PM\",\n            \"activity\": \"Plan next week, organize study materials\",\n            \"technique\": \"Weekly review + goal setting\"\n          },\n          {\n            \"time\": \"Afternoon\",\n            \"activity\": \"Preview next week's topics (1-2 hours max)\",\n            \"technique\": \"Pre-reading for better retention\"\n          }\n        ]\n      }\n    ],\n    \"weekly_plan\": {\n      \"monday\": \"Data Structures Exam + Begin Assignment 1\",\n      \"tuesday\": \"DBMS Prep (Phase 1) + Complete Assignment 1\",\n      \"wednesday\": \"Intensive DBMS Prep + Assignment 2 (50%)\",\n      \"thursday\": \"DBMS Exam + Complete Assignment 2\",\n      \"friday\": \"Assignment 3 Completion + All Submissions\",\n      \"weekend\": \"Recovery + Light preparation for next week\"\n    },\n    \"priority_tasks\": [\n      {\n        \"priority\": \"URGENT\",\n        \"task\": \"Data Structures Exam - Monday\",\n        \"preparation_status\": \"Final review phase\",\n        \"time_allocated\": \"Morning review sessions\"\n      },\n      {\n        \"priority\": \"URGENT\",\n        \"task\": \"DBMS Exam - Thursday\",\n        \"preparation_status\": \"Intensive prep Tue-Wed\",\n        \"time_allocated\": \"15+ hours across 3 days\"\n      },\n      {\n        \"priority\": \"HIGH\",\n        \"task\": \"Assignment 1\",\n        \"deadline\": \"Friday\",\n        \"time_allocated\": \"Complete by Tuesday evening\"\n      },\n      {\n        \"priority\": \"HIGH\",\n        \"task\": \"Assignment 2\",\n        \"deadline\": \"Friday\",\n        \"time_allocated\": \"Wed afternoon + Thursday evening\"\n      },\n      {\n        \"priority\": \"HIGH\",\n        \"task\": \"Assignment 3\",\n        \"deadline\": \"Friday\",\n        \"time_allocated\": \"Friday full day focus\"\n      }\n    ],\n    \"study_techniques\": [\n      {\n        \"technique\": \"Pomodoro Technique\",\n        \"application\": \"All study sessions - 25 min focus, 5 min break\",\n        \"benefit\": \"Maintains focus and prevents burnout\"\n      },\n      {\n        \"technique\": \"Active Recall\",\n        \"application\": \"Exam preparation - self-testing without notes\",\n        \"benefit\": \"Strengthens memory retrieval and identifies gaps\"\n      },\n      {\n        \"technique\": \"Spaced Repetition\",\n        \"application\": \"DBMS concepts reviewed Tue, Wed, Thu morning\",\n        \"benefit\": \"Improves long-term retention\"\n      },\n      {\n        \"technique\": \"Practice Problems\",\n        \"application\": \"Both exams - solve past papers and exercises\",\n        \"benefit\": \"Application of concepts under time pressure\"\n      },\n      {\n        \"technique\": \"Time-Boxing\",\n        \"application\": \"Assignment work - fixed time blocks per task\",\n        \"benefit\": \"Prevents perfectionism and ensures completion\"\n      },\n      {\n        \"technique\": \"Sleep Consolidation\",\n        \"application\": \"Light review before bed Wednesday night\",\n        \"benefit\": \"Enhances memory consolidation during sleep\"\n      }\n    ],\n    \"recommendations\": \"This is a high-intensity week with back-to-back exams and multiple deadlines. Key strategies: (1) Prioritize exam preparation over assignment perfection - aim for completion rather than perfection on assignments. (2) Use Monday evening for lighter work post-Data Structures exam to avoid burnout. (3) Wednesday is your most intensive day - ensure adequate sleep Tuesday night. (4) Build in buffer time Friday afternoon for unexpected issues. (5) Don't skip breaks - they're essential for sustained performance. (6) Stay hydrated and maintain regular meals. (7) If feeling overwhelmed, reach out to professors about assignment extensions BEFORE Friday. (8) Consider forming a quick study group for DBMS Tuesday evening for collaborative problem-solving. (9) Weekend recovery is crucial - don't over-commit to catch-up work.\",\n    \"estimated_hours\": {\n      \"total_study_hours\": 42,\n      \"exam_preparation\": 18,\n      \"assignment_work\": 20,\n      \"review_and_buffer\": 4,\n      \"daily_average\": 6\n    }\n  },\n  \"metadata\": {\n    \"agent_name\": \"Study Planner Agent\",\n    \"timestamp\": \"2025-01-11T10:30:00Z\"\n  }\n}\n```"
+  },
+  "test_passed": false
+}

@@ -1,0 +1,55 @@
+{
+  "workflow_name": "Smart College Life Manager",
+  "created_at": "2026-02-08T00:00:00Z",
+  "agents": [
+    {
+      "agent_id": "6988350dab8c2b0ff025872c",
+      "name": "Academic Coordinator",
+      "type": "manager",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "managed_agents": [
+        "698834b829694629a3a3596e",
+        "698834ceb662c978044a1588",
+        "698834f2f92870f1ee0acc6a"
+      ]
+    },
+    {
+      "agent_id": "698834b829694629a3a3596e",
+      "name": "LMS Sync Agent",
+      "type": "sub-agent",
+      "provider": "OpenAI",
+      "model": "gpt-4.1"
+    },
+    {
+      "agent_id": "698834ceb662c978044a1588",
+      "name": "Study Planner Agent",
+      "type": "sub-agent",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-5"
+    },
+    {
+      "agent_id": "698834f2f92870f1ee0acc6a",
+      "name": "Collaboration Agent",
+      "type": "sub-agent",
+      "provider": "OpenAI",
+      "model": "gpt-4.1"
+    },
+    {
+      "agent_id": "69883529b662c978044a158f",
+      "name": "Smart Reminder Agent",
+      "type": "independent",
+      "provider": "Google",
+      "model": "gemini-2.5-pro",
+      "trigger": "Scheduled: Every 6 hours + event-triggered"
+    }
+  ],
+  "total_agents": 5,
+  "response_schemas": [
+    "response_schemas/academic_coordinator_response.json",
+    "response_schemas/lms_sync_agent_response.json",
+    "response_schemas/study_planner_agent_response.json",
+    "response_schemas/collaboration_agent_response.json",
+    "response_schemas/smart_reminder_agent_response.json"
+  ]
+}

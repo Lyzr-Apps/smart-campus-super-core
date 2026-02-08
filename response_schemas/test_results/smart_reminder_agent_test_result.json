@@ -1,0 +1,15 @@
+{
+  "agent_name": "Smart Reminder Agent",
+  "agent_id": "69883529b662c978044a158f",
+  "test_message": "Check for upcoming deadlines in the next 24 hours and any attendance warnings I should be aware of.",
+  "expected_purpose": "Sends deadline reminders and attendance alerts",
+  "timestamp": "2026-02-08T07:07:45.760715",
+  "is_valid_json": false,
+  "validation_errors": [
+    "Response is not valid JSON: Expecting value: line 1 column 1 (char 0)"
+  ],
+  "actual_response": {
+    "raw_text": "Error in LLM generation: **litellm.BadRequestError: GroqException - {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n**"
+  },
+  "raw_response": "Error in LLM generation: **litellm.BadRequestError: GroqException - {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n**"
+}
